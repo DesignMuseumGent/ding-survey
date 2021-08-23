@@ -1,0 +1,35 @@
+var express = require('express')
+var app = express()
+var bodyParser = require('body-parser')
+var fs = require('fs');
+
+
+app.use(express.static('public'))
+
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+}));
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html')
+})
+
+app.post('/feedback', (req, res) => {
+  var timestamp = new Date().getTime();
+  req.body.timestamp = timestamp;
+  console.log(req.body)
+  fs.writeFile('./feedback/'+timestamp+'.json', JSON.stringify(req.body), function (err) {
+    if (err) return console.log(err);
+    res.redirect('/bedankt')
+  });
+
+})
+
+app.get('/bedankt', (req, res) => {
+  res.sendFile(__dirname + '/bedankt.html')
+})
+
+app.listen(3000, function() {
+  console.log('listening on 3000')
+})
