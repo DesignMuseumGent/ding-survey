@@ -9,7 +9,11 @@ Made to work offline on a Raspberry Pi.
 
 ## Commando's
 
+Productie
+
 `node server.js`
+
+Lokaal
 
 `npm run dev`
 
