@@ -3,8 +3,8 @@ var app = express()
 var bodyParser = require('body-parser')
 var fs = require('fs');
 
-
-app.use(express.static('public'))
+const path = require('path')
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
@@ -23,7 +23,7 @@ app.post('/feedback', (req, res) => {
   var timestamp = new Date().getTime();
   req.body.timestamp = timestamp;
   console.log(req.body)
-  fs.writeFile('./feedback/'+timestamp+'.json', JSON.stringify(req.body), function (err) {
+  fs.writeFile(path.join(__dirname, 'feedback')+'/'+timestamp+'.json', JSON.stringify(req.body), function (err) {
     if (err) return console.log(err);
     if(req.body.lang == "nl") {
       res.redirect('/bedankt')
