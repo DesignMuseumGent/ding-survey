@@ -31,7 +31,6 @@ app.post('/feedback', (req, res) => {
       res.redirect('/thanks')
     }
   });
-
 })
 
 app.get('/bedankt', (req, res) => {

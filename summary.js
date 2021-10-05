@@ -30,9 +30,7 @@ function getFile(filename) {
     return fs.readFileAsync('./feedback/' + filename, 'utf8');
 }
 
-
-// start a blank fishes.json file
-fs.writeFile('./summary.json', '', function(){console.log('done')});
+fs.writeFile('./public/summary.json', '', function(){console.log('done')});
 
 
 // read all json files in the directory, filter out those needed to process, and using Promise.all to time when all async readFiles has completed.
@@ -45,7 +43,7 @@ fs.readdirAsync('./feedback').then(function (filenames){
       var json_file = JSON.parse(file);
       summaryFiles.push(json_file);
     });
-    fs.appendFile("./summary.json", JSON.stringify(summaryFiles, null, 4), function(err) {
+    fs.appendFile("./public/summary.json", JSON.stringify(summaryFiles, null, 4), function(err) {
         if(err) {
           return console.log(err);
         }
@@ -58,6 +56,6 @@ fs.readdirAsync('./feedback').then(function (filenames){
         }
 
         // print CSV string
-        fs.writeFileSync('summary.csv', csv);
+        fs.writeFileSync('./public/summary.csv', csv);
     });
 });

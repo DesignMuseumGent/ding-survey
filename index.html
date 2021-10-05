@@ -11,18 +11,24 @@
   </head>
   <body>
 
-    <div class="container">
+    <div class="container-fluid">
 
-      <div class="mt-3">
-    <div class="btn-group" role="group" aria-label="Basic outlined example">
-      <a class="btn btn-outline-primary" href="/">NL</a>
-      <a class="btn btn-outline-primary" href="/en">EN</a>
-    </div>
-  </div>
 
-    <main class="form-signin mt-2">
+
+    <main class="form-signin mt-2 p-2">
       <form action="/feedback" method="POST">
-        <h1 class="h1 mb-3 fw-semibold">Helemaal jouw DING</h1>
+
+        <div class="row">
+          <div class="col">
+            <h1 class="h1 mb-3 fw-semibold">Helemaal jouw DING</h1>
+          </div>
+          <div class="col">
+            <div class="btn-group" role="group" aria-label="Taal" style="float: right">
+              <a class="btn btn-outline-primary" href="/">NL</a>
+              <a class="btn btn-outline-primary" href="/en">EN</a>
+            </div>
+          </div>
+        </div>
 
         <div class="mb-3">
           <label for="exampleFormControlTextarea1" class="form-label lead">DING wordt als onderdeel van het museum volledig gratis toegankelijk.<br/>Wat verwacht jij er te zien of te doen? En hoe kunnen we DING ook van jou maken?</label>
