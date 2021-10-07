@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 }));
 
 app.get('/', (req, res) => {
+  console.log("woho")
   res.sendFile(__dirname + '/index.html')
 })
 
@@ -43,4 +44,5 @@ app.get('/thanks', (req, res) => {
 
 app.listen(3000, function() {
   console.log('listening on 3000')
+  console.log("woho")
 })

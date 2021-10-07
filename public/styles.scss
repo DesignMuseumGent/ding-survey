@@ -127,3 +127,121 @@
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 // 6. Add additional custom code here
+
+// GROEN
+
+body {
+  background-color: #77be7e;
+}
+
+*:focus {
+  outline:0;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.form-control,
+.form-control:focus,
+.form-check-input {
+  background-color: #c2e2d7;
+}
+
+.form-check-input:checked {
+  background-color: #5f9664;
+}
+
+.form-text {
+  color: #000;
+}
+
+.btn-primary {
+  background-color: #5f9664;
+  border: none;
+  color: #000;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #4f7b53;
+  border: none;
+  color: #000;
+}
+
+.btn-outline-primary {
+  color: #000;
+  border-color: #5f9664;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+  color: #000;
+  border-color: #5f9664;
+  background-color: #5f9664;
+}
+
+// BLAUW
+
+body {
+  background-color: #004a9b;
+  color: #FFF;
+  background-image: url('./achtergrond.png');
+  background-size: 70%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 1rem);
+}
+
+*:focus {
+  outline:0;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.form-control,
+.form-control:focus,
+.form-check-input {
+  background-color: #FFF;
+}
+
+.form-check-input:checked {
+  background-color: #4da5c8;
+}
+
+.form-text {
+  color: #FFF;
+}
+
+.btn-primary {
+  background-color: #004a9b;
+  border: 3px solid #FFF;
+  color: #FFF;
+  border-radius: 0px;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #004a9b;
+  border: 3px solid #FFF;
+  color: #FFF;
+}
+
+.btn-outline-primary {
+  color: #FFF;
+  border-color: #FFF;
+  border-radius: 0px;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+  color: #FFF;
+  border-color: #FFF;
+  background-color: #5f9664;
+}
+
+.text-monospace {
+  font-family: "dmg"
+}
