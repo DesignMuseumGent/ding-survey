@@ -8064,64 +8064,13 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-color: #77be7e;
-}
-
-*:focus {
-  outline: 0;
-  border-color: transparent !important;
-  box-shadow: none !important;
-}
-
-.form-control,
-.form-control:focus,
-.form-check-input {
-  background-color: #c2e2d7;
-}
-
-.form-check-input:checked {
-  background-color: #5f9664;
-}
-
-.form-text {
-  color: #000;
-}
-
-.btn-primary {
-  background-color: #5f9664;
-  border: none;
-  color: #000;
-}
-
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:focus {
-  background-color: #4f7b53;
-  border: none;
-  color: #000;
-}
-
-.btn-outline-primary {
-  color: #000;
-  border-color: #5f9664;
-}
-
-.btn-outline-primary:hover,
-.btn-outline-primary:active,
-.btn-outline-primary:focus {
-  color: #000;
-  border-color: #5f9664;
-  background-color: #5f9664;
-}
-
-body {
   background-color: #004a9b;
   color: #FFF;
   background-image: url("./achtergrond.png");
-  background-size: 70%;
+  background-size: 51%;
   background-position: bottom;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: calc(100vh - 1rem);
 }
 
 *:focus {
