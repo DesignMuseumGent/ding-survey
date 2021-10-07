@@ -12,7 +12,6 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 }));
 
 app.get('/', (req, res) => {
-  console.log("woho")
   res.sendFile(__dirname + '/index.html')
 })
 
